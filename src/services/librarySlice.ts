@@ -10,7 +10,7 @@ import type {
 
 export const libraryApi = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000/api",
+    baseUrl: "https://nextlevellibrarymanagmentapi.vercel.app/api",
   }),
   tagTypes: ["Books", "Borrow"],
   endpoints: (builder) => ({

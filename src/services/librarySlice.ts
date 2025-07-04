@@ -10,7 +10,7 @@ import type {
 
 export const libraryApi = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://nextlevellibrarymanagmentapi.vercel.app/api",
+    baseUrl: "http://localhost:3000/api",
   }),
   tagTypes: ["Books", "Borrow"],
   endpoints: (builder) => ({
@@ -20,7 +20,7 @@ export const libraryApi = createApi({
     }),
     getBookSummary: builder.query<BorrowSummaryResponse, void>({
       query: () => "borrow",
-      providesTags: ["Borrow"],
+      providesTags: ["Books", "Borrow"],
     }),
     createBook: builder.mutation<createBookResponse, Book>({
       query: (bookData) => ({

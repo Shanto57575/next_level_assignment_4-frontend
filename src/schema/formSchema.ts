@@ -19,7 +19,7 @@ export const formSchema = z.object({
   description: z.string().min(1, {
     message: "description is required.",
   }),
-  copies: z.coerce.number().min(1, {
-    message: "At least 1 copy is required.",
+  copies: z.coerce.number().min(0, {
+    message: "it must be a positive number.",
   }),
 });

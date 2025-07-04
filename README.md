@@ -1,10 +1,4 @@
-Excellent, Shanto! Let’s compile two professional README.md files for your **Minimal Library Management System**—one for the frontend, one for the backend. I’ll also align the frontend README with the API routes from your `libraryApi` snippet.
-
----
-
-# ✅ Frontend README.md
-
-```markdown
+markdown
 # 📚 Minimal Library Management System — Frontend
 
 This is the **Frontend** of the Minimal Library Management System built with:
@@ -12,6 +6,7 @@ This is the **Frontend** of the Minimal Library Management System built with:
 - **React** (with TypeScript)
 - **Redux Toolkit + RTK Query**
 - **Tailwind CSS**
+- **ShadCn UI**
 
 The app lets users:
 
@@ -28,7 +23,7 @@ All actions are integrated with a REST API (no authentication required).
 
 ## 🚀 Live Demo
 
-[Frontend Live URL](#) <>
+[Frontend Live URL](https://next-level-assignment-4-frontend.vercel.app)
 
 ---
 
@@ -41,43 +36,13 @@ All actions are integrated with a REST API (no authentication required).
 | Styling             | Tailwind CSS + ShadCN ui       |
 | API Integration     | RESTful API         |
 
----
-
-## 📂 Folder Structure (Simplified)
-
-```
-
-src/
-components/          // Navbar, Footer, UI components
-features/            // Books, Borrow feature components
-pages/               // Each route/page
-services/            // RTK Query API definitions
-interfaces/          // TypeScript types/interfaces
-App.tsx
-main.tsx
-
-````
-
----
-
-## 🔗 Available Routes
-
-| Frontend Route | Description |
-| -------------- | ----------- |
-| `/books`       | View all books |
-| `/create-book` | Create a new book |
-| `/edit-book/:id` | Edit an existing book |
-| `/books/:id`   | View book details |
-| `/borrow/:bookId` | Borrow a specific book |
-| `/borrow-summary` | See summary of borrowed books |
-
----
 ## ⚙️ Setup & Run Locally
 
 1. **Clone the repo**
 
 ```bash
-git clone hhttps://github.com/Shanto57575/next_level_assignment_4-frontend
+git clone https://github.com/Shanto57575/next_level_assignment_4-frontend.git
+
 cd next_level_assignment_4-frontend
 ````
 
@@ -91,8 +56,6 @@ npm install
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 4. Open:
@@ -119,8 +82,11 @@ http://localhost:5173
 
 ---
 
-## ⚠️ Notes
+## 👨‍💻 Author
 
-* No authentication implemented in this version.
-* Works seamlessly with the provided backend.
+`Md Shahidul Islam Shanto`
+
+`Full Stack Developer`
+
+[My portfolio](https://shansphere.vercel.app)
 

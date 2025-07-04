@@ -39,7 +39,7 @@ const EditModal = ({ open, onOpenChange, book }: ModalProps) => {
       genre: book?.genre,
       description: book?.description || "",
       isbn: book?.isbn || "",
-      copies: book?.copies || 1,
+      copies: book?.copies || 0,
     },
   });
 
@@ -184,9 +184,18 @@ const EditModal = ({ open, onOpenChange, book }: ModalProps) => {
                         placeholder="Number of copies"
                         className="font-sans w-full"
                         type="number"
-                        min={1}
+                        min={0}
                         {...field}
-                        onChange={(e) => field.onChange(Number(e.target.value))}
+                        value={field.value === undefined ? '' : field.value.toString()}
+                        onChange={e => {
+                          const val = e.target.value;
+                          if (val === "") {
+                            field.onChange(0);
+                          } else {
+                            const num = Number(val);
+                            if (!isNaN(num)) field.onChange(num);
+                          }
+                        }}
                       />
                     </FormControl>
                     <FormMessage />

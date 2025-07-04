@@ -1,69 +1,126 @@
-# React + TypeScript + Vite
+Excellent, Shanto! Let’s compile two professional README.md files for your **Minimal Library Management System**—one for the frontend, one for the backend. I’ll also align the frontend README with the API routes from your `libraryApi` snippet.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# ✅ Frontend README.md
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```markdown
+# 📚 Minimal Library Management System — Frontend
 
-## Expanding the ESLint configuration
+This is the **Frontend** of the Minimal Library Management System built with:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** (with TypeScript)
+- **Redux Toolkit + RTK Query**
+- **Tailwind CSS**
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The app lets users:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- View all books
+- Add new books
+- Edit book details
+- Delete books
+- Borrow books
+- View borrow summary
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+All actions are integrated with a REST API (no authentication required).
+
+---
+
+## 🚀 Live Demo
+
+[Frontend Live URL](#) <>
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer              | Technology          |
+| ------------------- | ------------------- |
+| Frontend            | React + TypeScript  |
+| State Management    | Redux Toolkit + RTK Query |
+| Styling             | Tailwind CSS + ShadCN ui       |
+| API Integration     | RESTful API         |
+
+---
+
+## 📂 Folder Structure (Simplified)
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+src/
+components/          // Navbar, Footer, UI components
+features/            // Books, Borrow feature components
+pages/               // Each route/page
+services/            // RTK Query API definitions
+interfaces/          // TypeScript types/interfaces
+App.tsx
+main.tsx
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+````
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🔗 Available Routes
+
+| Frontend Route | Description |
+| -------------- | ----------- |
+| `/books`       | View all books |
+| `/create-book` | Create a new book |
+| `/edit-book/:id` | Edit an existing book |
+| `/books/:id`   | View book details |
+| `/borrow/:bookId` | Borrow a specific book |
+| `/borrow-summary` | See summary of borrowed books |
+
+---
+## ⚙️ Setup & Run Locally
+
+1. **Clone the repo**
+
+```bash
+git clone hhttps://github.com/Shanto57575/next_level_assignment_4-frontend
+cd next_level_assignment_4-frontend
+````
+
+2. **Install dependencies**
+
+```bash
+npm install
 ```
+
+3. **Run development server**
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 💡 Features Implemented
+
+✅ Responsive UI
+✅ CRUD operations for books
+✅ Borrow functionality
+✅ Borrow summary view
+✅ Toast notifications
+
+---
+
+## 🎨 Styling
+
+* Fully responsive layout using Tailwind CSS.
+
+---
+
+## ⚠️ Notes
+
+* No authentication implemented in this version.
+* Works seamlessly with the provided backend.
+
